@@ -9,8 +9,8 @@ const ACHIEVEMENTS = [
   { title: "Best Paper Award", icon: Presentation, desc: "IEEE Conference on Wireless Communications.", color: "text-neon-purple" },
   { title: "Robotics Competition Winner", icon: Medal, desc: "Line follower and maze solver robot.", color: "text-neon-green" },
   { title: "Faculty, C-DAC Drone Program", icon: Users, desc: "Served as resource training faculty for the C-DAC Drone Development Program at Stanley College of Engineering and Technology.", color: "text-soft-blue" },
-  { title: "Merit Scholarship", icon: Award, desc: "Awarded for academic excellence in the engineering department.", color: "text-white" },
-  { title: "Workshop Facilitator", icon: BookOpen, desc: "Organized multiple 2-3 days workshops on Embedded system and IIoT in the past year", color: "text-electric-cyan" },
+  { title: "Ramanujan Maths 1st Place Award", icon: Award, desc: "First place in Ramanujan mathematics competition in district level.", color: "text-white" },
+  { title: "Workshop Co-Facilitator", icon: BookOpen, desc: "Organized multiple 2-3 days workshops on Embedded system and IIoT in the past year", color: "text-electric-cyan" },
 ];
 
 export default function Achievements() {
