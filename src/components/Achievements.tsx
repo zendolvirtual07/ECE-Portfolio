@@ -10,7 +10,7 @@ const ACHIEVEMENTS = [
   { title: "Robotics Competition Winner", icon: Medal, desc: "Line follower and maze solver robot.", color: "text-neon-green" },
   { title: "Faculty, C-DAC Drone Program", icon: Users, desc: "Served as resource training faculty for the C-DAC Drone Development Program at Stanley College of Engineering and Technology.", color: "text-soft-blue" },
   { title: "Merit Scholarship", icon: Award, desc: "Awarded for academic excellence in the engineering department.", color: "text-white" },
-  { title: "Workshop Organizer", icon: BookOpen, desc: "Organized a 2-day hands-on Arduino workshop.", color: "text-electric-cyan" },
+  { title: "Workshop Facilitator", icon: BookOpen, desc: "Organized multiple 2-3 days workshops on Embedded system and IIoT in the past year", color: "text-electric-cyan" },
 ];
 
 export default function Achievements() {

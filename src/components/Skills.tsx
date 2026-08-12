@@ -38,8 +38,6 @@ function SkillNode({ text, position }: { text: string; position: [number, number
 }
 
 function SkillGalaxy() {
-  const groupRef = useRef<THREE.Group>(null);
-  
   const nodes = useMemo(() => {
     return SKILLS.map((skill, i) => {
       // Fibonacci sphere distribution
@@ -55,15 +53,8 @@ function SkillGalaxy() {
     });
   }, []);
 
-  useFrame((state, delta) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y += delta * 0.1;
-      groupRef.current.rotation.x += delta * 0.05;
-    }
-  });
-
   return (
-    <group ref={groupRef}>
+    <group>
       {nodes.map((node, i) => (
         <SkillNode key={i} text={node.skill} position={node.position} />
       ))}
@@ -94,18 +85,25 @@ export default function Skills() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1 }}
-          className="w-full h-[500px] md:h-[600px] glass-card overflow-hidden cursor-grab active:cursor-grabbing"
+          className="w-full h-[500px] md:h-[600px] glass-card overflow-hidden cursor-grab active:cursor-grabbing relative"
         >
-          <Canvas camera={{ position: [0, 0, 8], fov: 60 }}>
+          <Canvas camera={{ position: [0, 0, 8], fov: 60 }} dpr={[1, 2]}>
             <ambientLight intensity={0.5} />
             <pointLight position={[10, 10, 10]} intensity={1} color="#00E5FF" />
             <Suspense fallback={null}>
               <SkillGalaxy />
             </Suspense>
-            <OrbitControls enableZoom={false} enablePan={false} />
+            <OrbitControls 
+              enableZoom={false} 
+              enablePan={false} 
+              autoRotate={true} 
+              autoRotateSpeed={0.8}
+              enableDamping={true}
+              dampingFactor={0.05}
+            />
           </Canvas>
         </motion.div>
       </div>
