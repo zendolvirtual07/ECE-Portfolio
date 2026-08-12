@@ -62,12 +62,15 @@ function Microchip() {
         <meshStandardMaterial color="#E2E8F0" metalness={0.9} roughness={0.1} />
       </Box>
       
-      {/* IC Center glowing core */}
+      {/* IC Center shiny metallic core */}
       <Box args={[1.5, 0.32, 1.5]} position={[0, 0.05, 0]}>
-        <meshStandardMaterial color="#111" metalness={1} roughness={0} />
-      </Box>
-      <Box args={[1.2, 0.35, 1.2]} position={[0, 0.05, 0]}>
-        <meshStandardMaterial color="#00E5FF" emissive="#00E5FF" emissiveIntensity={1} wireframe />
+        <meshPhysicalMaterial 
+          color="#1a1a1a" 
+          metalness={0.9} 
+          roughness={0.1} 
+          clearcoat={1.0} 
+          clearcoatRoughness={0.1} 
+        />
       </Box>
 
       {/* Golden Pins along the sides */}
