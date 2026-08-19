@@ -97,7 +97,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-gray-300 text-lg leading-relaxed mb-8"
             >
-              I am a recent Electronics and Communication Engineering graduate passionate about embedded systems, IoT, communication technologies, electronics design, and software development. I enjoy solving real-world problems through innovation and continuously learning emerging technologies.
+              Passionate Electronics Engineer specializing in high-performance embedded systems, industrial IoT, and next-generation automation. Translating complex engineering challenges into streamlined, intelligent hardware, my expertise spans across deep-tech IoT, advanced robotics, and real-time communication systems.
             </motion.p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
