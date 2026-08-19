@@ -149,9 +149,8 @@ export default function Hero() {
             Electronics & Communication Engineer
           </h2>
           <p className="text-gray-400 mb-8 max-w-lg leading-relaxed text-lg">
-            Passionate Electronics Engineer specializing in high-performance embedded systems, industrial IoT, and next-generation automation. Translating complex engineering challenges into streamlined, intelligent hardware, my expertise spans across deep-tech IoT, advanced robotics, and real-time communication systems.
+            Recent Graduate | Embedded Systems Enthusiast | IoT Developer | Problem Solver.
             <br className="mb-2" />
-            <br className="mb-1" />
             Currently exploring <TypingText />
           </p>
 
